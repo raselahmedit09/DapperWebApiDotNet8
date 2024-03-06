@@ -32,6 +32,7 @@ BEGIN
     SELECT @Id = SCOPE_IDENTITY();
 END
 
+
 CREATE PROCEDURE [dbo].[usp_DeleteEmployees](
 @Id INT
 )
@@ -41,6 +42,7 @@ AS
 DELETE FROM Employees 
 WHERE Id= @Id
 
+
 CREATE PROCEDURE [dbo].[usp_GetEmployeeById](
 @EmployeeId INT 
 )
@@ -49,11 +51,13 @@ AS
 
 SELECT * FROM Employees WHERE Id = @EmployeeId
 
+
 CREATE PROCEDURE [dbo].[usp_GetEmployees]
 
 AS 
 
 SELECT * FROM Employees
+
 
 CREATE PROCEDURE [dbo].[usp_UpdateCompany](
 @Id int,
